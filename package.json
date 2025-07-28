@@ -14,7 +14,12 @@
     "build-and-start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all --parallel build start",
     "validate-config": "node services/config-validator",
     "health-check": "node services/healthcheck",
-    "dependency-audit": "npx improved-yarn-audit --ignore-dev-deps"
+    "dependency-audit": "npx improved-yarn-audit --ignore-dev-deps",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:production": "wrangler deploy --env production",
+    "dev:worker": "wrangler dev",
+    "build:worker": "npm run build && wrangler build"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -68,7 +73,9 @@
     "typescript": "^5.4.4",
     "vue-cli-plugin-yaml": "^1.0.2",
     "vue-svg-loader": "^0.16.0",
-    "vue-template-compiler": "^2.7.0"
+    "vue-template-compiler": "^2.7.0",
+    "wrangler": "^3.0.0",
+    "@cloudflare/kv-asset-handler": "^0.3.0"
   },
   "engines": {
     "node": ">=16.0.0 <21.6.2"
