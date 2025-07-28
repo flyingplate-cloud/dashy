@@ -1,0 +1,45 @@
+name = "dashy"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Environment configurations
+[env.production]
+name = "dashy-prod"
+
+[env.staging]
+name = "dashy-staging"
+
+# Build configuration
+[build]
+command = "npm run build"
+
+# KV Namespaces for storing configuration
+[[kv_namespaces]]
+binding = "DASHY_CONFIG"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+# Static assets
+[site]
+bucket = "./dist"
+
+# Variables
+[vars]
+ENVIRONMENT = "production"
+
+[env.production.vars]
+ENVIRONMENT = "production"
+
+[env.staging.vars]
+ENVIRONMENT = "staging"
+
+# Routes
+routes = [
+  { pattern = "your-domain.com/*", zone_name = "your-domain.com" }
+]
+
+# Custom domains
+custom_domains = [
+  { domain = "dashy.your-domain.com", zone_name = "your-domain.com" }
+]

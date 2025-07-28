@@ -1,0 +1,122 @@
+{
+  "pageInfo": {
+    "title": "Мой Dashboard",
+    "description": "Персональная панель управления сервисами",
+    "navLinks": [
+      {
+        "title": "GitHub",
+        "path": "https://github.com"
+      },
+      {
+        "title": "Документация",
+        "path": "https://dashy.to/docs"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "name": "Разработка",
+      "icon": "fas fa-code",
+      "items": [
+        {
+          "title": "GitHub",
+          "description": "Код проектов",
+          "icon": "fab fa-github",
+          "url": "https://github.com",
+          "status": "online"
+        },
+        {
+          "title": "GitLab",
+          "description": "CI/CD и репозитории",
+          "icon": "fab fa-gitlab",
+          "url": "https://gitlab.com",
+          "status": "online"
+        },
+        {
+          "title": "Stack Overflow",
+          "description": "Вопросы и ответы",
+          "icon": "fab fa-stack-overflow",
+          "url": "https://stackoverflow.com"
+        }
+      ]
+    },
+    {
+      "name": "Облачные сервисы",
+      "icon": "fas fa-cloud",
+      "items": [
+        {
+          "title": "AWS Console",
+          "description": "Amazon Web Services",
+          "icon": "fab fa-aws",
+          "url": "https://console.aws.amazon.com"
+        },
+        {
+          "title": "Google Cloud",
+          "description": "Google Cloud Platform",
+          "icon": "fas fa-cloud",
+          "url": "https://console.cloud.google.com"
+        },
+        {
+          "title": "Azure Portal",
+          "description": "Microsoft Azure",
+          "icon": "fab fa-microsoft",
+          "url": "https://portal.azure.com"
+        }
+      ]
+    },
+    {
+      "name": "Мониторинг",
+      "icon": "fas fa-chart-line",
+      "items": [
+        {
+          "title": "Grafana",
+          "description": "Метрики и дашборды",
+          "icon": "fas fa-chart-area",
+          "url": "http://localhost:3000"
+        },
+        {
+          "title": "Prometheus",
+          "description": "Система мониторинга",
+          "icon": "fas fa-database",
+          "url": "http://localhost:9090"
+        }
+      ]
+    },
+    {
+      "name": "Инструменты",
+      "icon": "fas fa-tools",
+      "items": [
+        {
+          "title": "VS Code",
+          "description": "Редактор кода",
+          "icon": "fas fa-code",
+          "url": "vscode://"
+        },
+        {
+          "title": "Postman",
+          "description": "API тестирование",
+          "icon": "fas fa-paper-plane",
+          "url": "https://app.getpostman.com"
+        }
+      ]
+    }
+  ],
+  "appConfig": {
+    "theme": "dark",
+    "language": "ru",
+    "layout": "auto",
+    "hideComponents": {
+      "header": false,
+      "footer": false,
+      "search": false,
+      "settings": false
+    },
+    "auth": {
+      "enabled": false
+    },
+    "statusCheck": {
+      "enabled": true,
+      "interval": 300
+    }
+  }
+}
